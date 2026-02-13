@@ -73,3 +73,11 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+ClassWithCharacters_BurstDebugInformation_DoNotShip/
+PanelAdded_BackUpThisFolder_ButDontShipItWithYourGame/
+PdfUploadAdded_BackUpThisFolder_ButDontShipItWithYourGame/
+ScenarioAdded_BackUpThisFolder_ButDontShipItWithYourGame/
+SpotlightToggleTest_BackUpThisFolder_ButDontShipItWithYourGame/
+StablePanel_BackUpThisFolder_ButDontShipItWithYourGame/
+WritingModeOn_BackUpThisFolder_ButDontShipItWithYourGame/
