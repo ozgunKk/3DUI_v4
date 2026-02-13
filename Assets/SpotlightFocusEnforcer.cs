@@ -1,42 +1,46 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpotlightFocusEnforcer : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private MenuActions menuActions;
-    [SerializeField] private Transform charactersRoot; 
+    [SerializeField] private Transform charactersRoot;
 
     [Header("Raycast")]
     [SerializeField] private float maxDistance = 8f;
-    [SerializeField] private LayerMask characterLayerMask = ~0; 
+    [SerializeField] private LayerMask characterLayerMask = ~0;
 
     [Tooltip("How often to check spotlight hit (seconds).")]
     [SerializeField] private float tickInterval = 0.05f;
 
+    [Header("Stability")]
+    [Tooltip("If the ray misses briefly, keep the last forced target for this long (seconds). Helps avoid flicker.")]
+    [SerializeField] private float missGraceSeconds = 0.12f;
+
     [Header("Debug")]
     [SerializeField] private bool debugDrawRay = true;
+    [SerializeField] private bool logStateChanges = false;
 
     private float _nextTickTime;
+    private float _lastHitTime;
 
     private HeadRotate _currentForced;
-    private bool _prevForcedWasActive; // previous normal state (isActive)
-    private readonly Dictionary<HeadRotate, bool> _savedStates = new();
 
     private void Update()
     {
         if (!menuActions || !charactersRoot) return;
+
         if (Time.time < _nextTickTime) return;
         _nextTickTime = Time.time + tickInterval;
 
-        // Only enforce in FollowPlayer mode while spotlight is ON
+        // Only enforce in Follow/Target mode while spotlight is ON
         if (!menuActions.IsSpotlightModeOn || !menuActions.IsFollowPlayerMode)
         {
             ClearForcedIfAny();
             return;
         }
 
-        // We raycast from spotlight position forward
+        // Raycast from spotlight position forward
         var spotT = menuActions.SpotlightTransform;
         if (!spotT)
         {
@@ -50,34 +54,43 @@ public class SpotlightFocusEnforcer : MonoBehaviour
         if (debugDrawRay)
             Debug.DrawRay(origin, dir * maxDistance, Color.yellow, tickInterval);
 
+        HeadRotate hitHr = null;
+
         if (Physics.Raycast(origin, dir, out RaycastHit hit, maxDistance, characterLayerMask, QueryTriggerInteraction.Ignore))
         {
-            var hr = hit.collider.GetComponentInParent<HeadRotate>();
-            if (hr && hr.transform.IsChildOf(charactersRoot))
-            {
-                ForceThisCharacter(hr);
-                return;
-            }
+            hitHr = hit.collider.GetComponentInParent<HeadRotate>();
+
+            // Make sure it belongs to the audience root
+            if (hitHr && !hitHr.transform.IsChildOf(charactersRoot))
+                hitHr = null;
         }
+
+        if (hitHr)
+        {
+            _lastHitTime = Time.time;
+            ForceThisCharacter(hitHr);
+            return;
+        }
+
+        // No hit: keep current forced for a short grace time to avoid flicker
+        if (_currentForced && (Time.time - _lastHitTime) <= missGraceSeconds)
+            return;
 
         ClearForcedIfAny();
     }
 
     private void ForceThisCharacter(HeadRotate hr)
     {
+        if (!hr) return;
         if (_currentForced == hr) return;
 
-        // Clear old one
         ClearForcedIfAny();
 
-        // Save previous normal state (isActive) once
-        if (!_savedStates.ContainsKey(hr))
-            _savedStates[hr] = hr.IsActive; // normal state only
-
         _currentForced = hr;
+        _currentForced.ForceActive(true);
 
-        // Force active
-        hr.ForceActive(true);
+        if (logStateChanges)
+            Debug.Log($"SpotlightFocusEnforcer: FORCING '{_currentForced.name}'");
     }
 
     private void ClearForcedIfAny()
@@ -85,6 +98,9 @@ public class SpotlightFocusEnforcer : MonoBehaviour
         if (!_currentForced) return;
 
         _currentForced.ForceActive(false);
+
+        if (logStateChanges)
+            Debug.Log($"SpotlightFocusEnforcer: CLEAR '{_currentForced.name}'");
 
         _currentForced = null;
     }

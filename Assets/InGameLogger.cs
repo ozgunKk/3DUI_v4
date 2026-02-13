@@ -9,25 +9,17 @@ public class InGameLogger : MonoBehaviour
     [SerializeField] private GameObject panelRoot;
     [SerializeField] private TMP_Text logText;
 
-    [Header("Filter (show logs that contain ANY of these)")]
-    [SerializeField]
-    private string[] includeAnyContains = new[]
-    {
-        "BoardSlideDeck",
-        "PdfUploadPanel",
-        "Slides",
-        "deck",
-        "page"
-    };
-
     [Header("Buffer")]
-    [SerializeField] private int maxLines = 80;
+    [SerializeField] private int maxLines = 120;
+
+    [Tooltip("If true, includes stack traces for errors/exceptions.")]
+    [SerializeField] private bool includeStackTracesForErrors = false;
 
     [Header("Startup")]
     [SerializeField] private bool startHidden = true;
 
     private readonly Queue<string> _lines = new Queue<string>();
-    private readonly StringBuilder _sb = new StringBuilder(8_192);
+    private readonly StringBuilder _sb = new StringBuilder(16_384);
     private bool _visible;
 
     private void Awake()
@@ -53,6 +45,19 @@ public class InGameLogger : MonoBehaviour
             RebuildText();
     }
 
+    public void Show()
+    {
+        _visible = true;
+        ApplyVisibleState();
+        RebuildText();
+    }
+
+    public void Hide()
+    {
+        _visible = false;
+        ApplyVisibleState();
+    }
+
     public void Clear()
     {
         _lines.Clear();
@@ -66,7 +71,7 @@ public class InGameLogger : MonoBehaviour
 
     private void HandleLog(string condition, string stackTrace, LogType type)
     {
-        if (!MatchesFilter(condition))
+        if (string.IsNullOrEmpty(condition))
             return;
 
         string color = type switch
@@ -80,29 +85,19 @@ public class InGameLogger : MonoBehaviour
 
         string line = $"<color={color}>[{type}]</color> {Escape(condition)}";
 
+        if (includeStackTracesForErrors &&
+            (type == LogType.Error || type == LogType.Exception || type == LogType.Assert) &&
+            !string.IsNullOrEmpty(stackTrace))
+        {
+            line += $"\n<color=#A0A0A0>{Escape(stackTrace)}</color>";
+        }
+
         _lines.Enqueue(line);
         while (_lines.Count > Mathf.Max(10, maxLines))
             _lines.Dequeue();
 
         if (_visible)
             RebuildText();
-    }
-
-    private bool MatchesFilter(string msg)
-    {
-        if (string.IsNullOrEmpty(msg)) return false;
-        if (includeAnyContains == null || includeAnyContains.Length == 0) return true;
-
-        // Case-insensitive contains
-        string lower = msg.ToLowerInvariant();
-        for (int i = 0; i < includeAnyContains.Length; i++)
-        {
-            string k = includeAnyContains[i];
-            if (string.IsNullOrEmpty(k)) continue;
-            if (lower.Contains(k.ToLowerInvariant()))
-                return true;
-        }
-        return false;
     }
 
     private void RebuildText()

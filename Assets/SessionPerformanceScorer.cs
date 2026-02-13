@@ -118,11 +118,30 @@ public class SessionPerformanceScorer : MonoBehaviour
         int presPct = Mathf.RoundToInt(AvgPresenter01 * 100f);
         int audPct = Mathf.RoundToInt(AvgAudience01 * 100f);
 
+        int total = audienceEngagement ? audienceEngagement.TotalCount : 0;
+        int e = audienceEngagement ? audienceEngagement.EngagedCount : 0;
+        int c = audienceEngagement ? audienceEngagement.ConfusedCount : 0;
+        int d = audienceEngagement ? audienceEngagement.DisengagedCount : 0;
+
+        float eP = (total > 0) ? (100f * e / total) : 0f;
+        float cP = (total > 0) ? (100f * c / total) : 0f;
+        float dP = (total > 0) ? (100f * d / total) : 0f;
+
+        int tF = audienceEngagement ? audienceEngagement.TeacherFocusedCount : 0;
+        int bF = audienceEngagement ? audienceEngagement.BoardFocusedCount : 0;
+
         return
             $"<b>Session Results</b>\n\n" +
             $"Overall: <b>{finalPct}%</b>\n\n" +
             $"Presenter Activity: {presPct}%\n" +
             $"Audience Engagement: {audPct}%\n\n" +
+            $"<b>Audience Lenses</b>\n" +
+            $"Engaged: {e} ({eP:0}%)\n" +
+            $"Confused: {c} ({cP:0}%)\n" +
+            $"Disengaged: {d} ({dP:0}%)\n\n" +
+            $"Teacher Focus (dwell): {tF}\n" +
+            $"Board Focus (dwell): {bF}\n\n" +
             $"Duration: {SessionDurationSec:F1}s";
     }
+
 }

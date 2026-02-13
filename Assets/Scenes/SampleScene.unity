@@ -196,13 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   panelRoot: {fileID: 249648795}
   logText: {fileID: 1582008504}
-  includeAnyContains:
-  - BoardSlideDeck
-  - PdfUploadPanel
-  - Slides
-  - deck
-  - page
   maxLines: 120
+  includeStackTracesForErrors: 0
   startHidden: 1
 --- !u!1 &14175219
 GameObject:
@@ -2285,6 +2280,133 @@ Transform:
   - {fileID: 1974234905}
   m_Father: {fileID: 1233902073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &105264718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105264719}
+  - component: {fileID: 105264721}
+  - component: {fileID: 105264720}
+  m_Layer: 0
+  m_Name: Spotlight3DUI_Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &105264719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105264718}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.68351847, y: -0.71993417, z: 0.08457675, w: -0.08569784}
+  m_LocalPosition: {x: -0.0035, y: 0.0003, z: -0.02057}
+  m_LocalScale: {x: 0.44418588, y: 0.48269346, z: 0.11524745}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1282624671}
+  m_LocalEulerAnglesHint: {x: 0.265, y: -193.828, z: 272.941}
+--- !u!114 &105264720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105264718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!108 &105264721
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105264718}
+  m_Enabled: 1
+  serializedVersion: 12
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 12
+  m_Range: 10
+  m_SpotAngle: 43.82239
+  m_InnerSpotAngle: 35.62447
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1 &105278530
 GameObject:
   m_ObjectHideFlags: 0
@@ -4515,6 +4637,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!136 &177608381
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4553,14 +4683,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 177608380}
   animSwitcher: {fileID: 177608379}
-  focusThreshold: 0.456
-  responsiveness: 0.306
+  focusThreshold: 0.256
   randomness: 0.15
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &190743866
 GameObject:
   m_ObjectHideFlags: 0
@@ -6403,7 +6533,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: -876546973899608171, guid: 1716ff8c1e51af14280cc97fbcba3b11, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6443,14 +6573,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249648795}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.28389, y: 1.818, z: 2.133}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.08702176, z: -0, w: 0.99620646}
+  m_LocalPosition: {x: -2.28389, y: 2.317, z: 2.133}
+  m_LocalScale: {x: 0.49788, y: 0.52122, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1582008503}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -9.985, z: 0}
 --- !u!1 &253089375
 GameObject:
   m_ObjectHideFlags: 0
@@ -6787,6 +6917,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!95 &278049029 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 36874fb1ce88d51429a332ed2ece16e1, type: 3}
@@ -6848,13 +6986,13 @@ MonoBehaviour:
   headRotate: {fileID: 278049028}
   animSwitcher: {fileID: 278049030}
   focusThreshold: 0.074
-  responsiveness: 0.06
   randomness: 0.02
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &279366458
 GameObject:
   m_ObjectHideFlags: 0
@@ -7030,6 +7168,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!136 &287888793
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7068,14 +7214,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 287888792}
   animSwitcher: {fileID: 287888791}
-  focusThreshold: 0.291
-  responsiveness: 0.257
+  focusThreshold: 0.174
   randomness: 0.1
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &291036849
 GameObject:
   m_ObjectHideFlags: 0
@@ -9107,15 +9253,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362434158}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.448, y: 0.984, z: 0.894}
+  m_LocalRotation: {x: -0, y: -0.0000014603136, z: -0, w: 1}
+  m_LocalPosition: {x: -1.9301043, y: 0.618, z: 1.1526}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1042136535}
   - {fileID: 1836402869}
   m_Father: {fileID: 1860676512}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &362434160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11192,8 +11338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6c2ff7fbbafd7488b680eb587d0f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuActions
-  spotlight3DUI: {fileID: 52972793}
   otherLights: []
+  targetSpotlight: {fileID: 105264721}
   playerHead: {fileID: 1542442284}
   followLookTarget: {fileID: 0}
   followLocalOffset: {x: 0, y: 0, z: 0}
@@ -11203,9 +11349,11 @@ MonoBehaviour:
   followSpotAngleMultiplier: 1.35
   followIntensityMultiplier: 0.8
   followRangeMultiplier: 1
-  boardSpotlight: {fileID: 0}
-  startWithSpotlightModeOn: 0
-  targetMode: 0
+  boardSpotlight: {fileID: 52972793}
+  startMode: 0
+  autoFindOtherLights: 1
+  logState: 0
+  mode: 0
 --- !u!4 &477055387
 Transform:
   m_ObjectHideFlags: 0
@@ -11299,8 +11447,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   engagementManager: {fileID: 488999166}
   hammerVFX: {fileID: 636579510}
-  highSparksBelow: 0.236
-  lowSparksBelow: 0.6
+  highSparksBelow: 0.212
+  lowSparksBelow: 0.484
   hysteresis: 0.05
   minHoldSeconds: 1
 --- !u!114 &488999166
@@ -11317,11 +11465,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   charactersRoot: {fileID: 1397117681}
   teacherTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
   questionnairePanelRoot: {fileID: 2059748359}
   tickInterval: 0.1
   smoothing: 0.2
+  lookAngleDeg: 25
   focusDwellSeconds: 0.15
-  logToConsole: 0
+  rollingWindowSeconds: 12
+  fidgetStartDegPerSec: 55
+  fidgetMaxDegPerSec: 160
+  fidgetPenaltyWeight: 0.254
+  engagedFocusFrac: 0.571
+  disengagedFocusFrac: 0.321
+  confusedSwitchRatePerSec: 0.35
+  logToConsole: 1
+  logIntervalSeconds: 3
 --- !u!1 &491406003
 GameObject:
   m_ObjectHideFlags: 0
@@ -16226,13 +16384,13 @@ MonoBehaviour:
   headRotate: {fileID: 704370582}
   animSwitcher: {fileID: 704370579}
   focusThreshold: 0.938
-  responsiveness: 0.327
   randomness: 0.05
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!114 &704370582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16255,6 +16413,14 @@ MonoBehaviour:
   isActive: 0
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!1001 &707825279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16510,6 +16676,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: b33351e4f7b67cc419dd38da1e516fbc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 509279031}
+    - targetCorrespondingSourceObject: {fileID: -4606508234831162796, guid: b33351e4f7b67cc419dd38da1e516fbc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1318807348}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4752241548726016364, guid: b33351e4f7b67cc419dd38da1e516fbc, type: 3}
       insertIndex: -1
@@ -18534,7 +18703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.164, y: 0.13}
+  m_AnchoredPosition: {x: 0.085, y: 0.13}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776192939
@@ -18557,7 +18726,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spotlight
+  m_text: Spotlight Board
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -18584,8 +18753,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.3
-  m_fontSizeBase: 28.3
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18798,6 +18967,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!136 &796822209
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18836,14 +19013,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 796822208}
   animSwitcher: {fileID: 796822207}
-  focusThreshold: 0.238
-  responsiveness: 0.088
+  focusThreshold: 0.168
   randomness: 0.1
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &801492221
 GameObject:
   m_ObjectHideFlags: 0
@@ -19129,6 +19306,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!136 &807257735
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19167,14 +19352,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 807257734}
   animSwitcher: {fileID: 807257733}
-  focusThreshold: 0.274
-  responsiveness: 0.292
+  focusThreshold: 0.13
   randomness: 0.2
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &813591765
 GameObject:
   m_ObjectHideFlags: 0
@@ -23451,6 +23636,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!136 &967126737
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -23489,14 +23682,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 967126736}
   animSwitcher: {fileID: 967126735}
-  focusThreshold: 0.47
-  responsiveness: 0.215
+  focusThreshold: 0.199
   randomness: 0.1
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &976931780
 GameObject:
   m_ObjectHideFlags: 0
@@ -24243,7 +24436,7 @@ MonoBehaviour:
   presenterTracker: {fileID: 1521428301}
   audienceEngagement: {fileID: 488999166}
   resultsPresenter: {fileID: 2059748365}
-  wPresenter: 0.299
+  wPresenter: 0.409
   wAudience: 0.701
   sampleInterval: 0.2
   printBreakdownToConsole: 1
@@ -24709,6 +24902,11 @@ Transform:
 --- !u!23 &1032553738 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -8610187319785364016, guid: b33351e4f7b67cc419dd38da1e516fbc, type: 3}
+  m_PrefabInstance: {fileID: 707825279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1032553740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4606508234831162796, guid: b33351e4f7b67cc419dd38da1e516fbc, type: 3}
   m_PrefabInstance: {fileID: 707825279}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1033854197
@@ -25294,19 +25492,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 477055386}
         m_TargetAssemblyTypeName: MenuActions, Assembly-CSharp
-        m_MethodName: ToggleSpotlightTarget
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CharacterAnimationSwitcher, Assembly-CSharp
-        m_MethodName: TriggerSpotlightPressed
+        m_MethodName: ToggleTargetSpotlight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27124,7 +27310,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 477055386}
         m_TargetAssemblyTypeName: MenuActions, Assembly-CSharp
-        m_MethodName: ToggleSpotlightMode
+        m_MethodName: ToggleTargetSpotlight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27919,7 +28105,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.164, y: 0.13}
+  m_AnchoredPosition: {x: 0.038, y: 0.13}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1249045475
@@ -27942,7 +28128,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spotlight
+  m_text: Spotlight Target
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -27969,8 +28155,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28.3
-  m_fontSizeBase: 28.3
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -28594,7 +28780,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   tickInterval: 0.05
+  missGraceSeconds: 0.12
   debugDrawRay: 1
+  logStateChanges: 0
 --- !u!1 &1287717196
 GameObject:
   m_ObjectHideFlags: 0
@@ -28850,19 +29038,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 477055386}
         m_TargetAssemblyTypeName: MenuActions, Assembly-CSharp
-        m_MethodName: ToggleSpotlightMode
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CharacterAnimationSwitcher, Assembly-CSharp
-        m_MethodName: TriggerSpotlightPressed
+        m_MethodName: ToggleBoardSpotlight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29845,6 +30021,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310864058}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1318807347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1318807348}
+  m_Layer: 0
+  m_Name: BoardTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1318807348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318807347}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1032553740}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1322152681
 GameObject:
   m_ObjectHideFlags: 0
@@ -31406,6 +31613,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!136 &1412550417
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31444,14 +31659,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 1412550416}
   animSwitcher: {fileID: 1412550415}
-  focusThreshold: 0.268
-  responsiveness: 0.165
+  focusThreshold: 0.085
   randomness: 0.2
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &1417594299 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4117612832317448079, guid: 191d5a3dbba2c074794a2fb137e15479, type: 3}
@@ -34002,20 +34217,20 @@ MonoBehaviour:
   voiceFallback01: 0.5
   useMicrophone: 1
   microphoneDeviceName: 
-  tickInterval: 0.1
+  tickInterval: 0.3
   smoothing: 0.291
-  weightSpotlight: 0.35
-  weightVoice: 0.02
+  weightSpotlight: 0.3
+  weightVoice: 0.1
   weightMovement: 0.2
-  weightHands: 0.3
-  weightHead: 0.1
-  moveSpeedGood: 0.3
-  headAngularGood: 50
-  handSpeedGood: 0.6
-  voiceWindowSeconds: 3
+  weightHands: 0.4
+  weightHead: 0.3
+  moveSpeedGood: 0.1
+  headAngularGood: 20
+  handSpeedGood: 0.4
+  voiceWindowSeconds: 4
   voiceVarianceBad: 0.0005
   voiceVarianceGood: 0.01
-  logToConsole: 0
+  logToConsole: 1
 --- !u!114 &1521428302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34093,6 +34308,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!136 &1530699290
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -34131,14 +34354,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 1530699289}
   animSwitcher: {fileID: 1530699288}
-  focusThreshold: 0.256
-  responsiveness: 0.32
-  randomness: 0.1
+  focusThreshold: 0.13
+  randomness: 0.275
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &1530843929
 GameObject:
   m_ObjectHideFlags: 0
@@ -34466,6 +34689,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!136 &1532314021
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -34504,14 +34735,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 1532314020}
   animSwitcher: {fileID: 1532314019}
-  focusThreshold: 0.3
-  responsiveness: 0.468
+  focusThreshold: 0.123
   randomness: 0.096
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &1532580955
 GameObject:
   m_ObjectHideFlags: 0
@@ -34691,6 +34922,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!95 &1540102540 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 08ded8e6c0d64a548bd4f1669b0c9349, type: 3}
@@ -34752,13 +34991,13 @@ MonoBehaviour:
   headRotate: {fileID: 1540102539}
   animSwitcher: {fileID: 1540102541}
   focusThreshold: 0.144
-  responsiveness: 0.074
   randomness: 0.1
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &1540458002
 GameObject:
   m_ObjectHideFlags: 0
@@ -35006,6 +35245,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 191d5a3dbba2c074794a2fb137e15479, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1391802438}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 191d5a3dbba2c074794a2fb137e15479, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 105264719}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 191d5a3dbba2c074794a2fb137e15479, type: 3}
       insertIndex: -1
@@ -39402,13 +39644,13 @@ MonoBehaviour:
   headRotate: {fileID: 1730060030}
   animSwitcher: {fileID: 0}
   focusThreshold: 0.938
-  responsiveness: 0.454
   randomness: 0.05
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!114 &1730060030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39431,6 +39673,14 @@ MonoBehaviour:
   isActive: 0
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!1 &1736114339
 GameObject:
   m_ObjectHideFlags: 0
@@ -41841,6 +42091,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!95 &1813365823 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 1d51660bc274ce5469bd9a173511a583, type: 3}
@@ -41901,14 +42159,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 1813365822}
   animSwitcher: {fileID: 1813365824}
-  focusThreshold: 0.35
-  responsiveness: 0.173
+  focusThreshold: 0.155
   randomness: 0.07
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &1814359485
 GameObject:
   m_ObjectHideFlags: 0
@@ -42166,6 +42424,14 @@ MonoBehaviour:
   isActive: 1
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!136 &1826449651
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -42204,14 +42470,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 1826449650}
   animSwitcher: {fileID: 1826449649}
-  focusThreshold: 0.332
-  responsiveness: 0.215
+  focusThreshold: 0.174
   randomness: 0.1
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!1 &1832670831
 GameObject:
   m_ObjectHideFlags: 0
@@ -43500,6 +43766,14 @@ MonoBehaviour:
   isActive: 0
   forcedActive: 0
   isInRange: 0
+  enableNaturalAttention: 1
+  presenterTarget: {fileID: 1832670832}
+  boardTarget: {fileID: 1318807348}
+  modeHoldRange: {x: 6, y: 18}
+  boardModeChance: 0.35
+  pauseSwitchingWhileForced: 1
+  logModeSwitches: 0
+  currentMode: 0
 --- !u!95 &1882248677 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 9891b33e43ec071469ee089a5da304a7, type: 3}
@@ -43565,14 +43839,14 @@ MonoBehaviour:
   presenter: {fileID: 1521428301}
   headRotate: {fileID: 1882248676}
   animSwitcher: {fileID: 1882248679}
-  focusThreshold: 0.803
-  responsiveness: 0.25
+  focusThreshold: 0.25
   randomness: 0.05
   decisionIntervalRange: {x: 2.5, y: 5}
   minStateHoldSeconds: 2
   allowWritingWhenUnfocused: 1
   writeChanceWhenUnfocused: 0.5
   logDecisions: 0
+  logIntervalSeconds: 3
 --- !u!4 &1915587403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5fbc70fc9dc90024888811bbe7f0498d, type: 3}
